@@ -1,25 +1,26 @@
 component {
-  this.name="mingo-nl";
-  this.mappings["/"] = getDirectoryFromPath( getCurrentTemplatePath());
+  this.name = "mingo-nl";
+  this.root = getDirectoryFromPath( getCurrentTemplatePath());
+  this.mappings["/"] = this.root;
 
   public void function onRequestStart() {
     var domainname = "home.mingo.nl";
     var relocateonce = (
-          cgi.server_port_secure eq 1
-            ? 'https'
-            : 'http'
-        ) & '://' & domainname & (
-          cgi.script_name eq "/index.cfm"
-            ? '/'
+          cgi.server_port_secure == 1
+            ? "https"
+            : "http"
+        ) & "://" & domainname & (
+          cgi.script_name == "/index.cfm"
+            ? "/"
             : cgi.script_name
         ) & (
-          len( trim( cgi.query_string )) gt 0
-            ? '?' & cgi.query_string
-            : ''
+          len( trim( cgi.query_string )) > 0
+            ? "?" & cgi.query_string
+            : ""
         );
 
     if( cgi.server_name != domainname ) {
-      location( relocateonce, false, 301 );
+      // location( relocateonce, false, 301 );
     }
   }
 
@@ -33,7 +34,7 @@ component {
       tpl = "home.cfm";
     }
 
-    if( !fileExists( expandPath( '../pages/#tpl#' ))) {
+    if( !fileExists( this.root & "/pages/#tpl#" )) {
       local.page = tpl;
       tpl = "404.cfm";
     }
@@ -57,8 +58,8 @@ component {
     cfheader( name="cache-control", value="max-age=604800" );
 
     if( cgi.HTTP_ACCEPT_ENCODING contains "gzip" ) {
-      var fileOut = createobject("java", "java.io.ByteArrayOutputStream").init();
-      var out = createobject("java","java.util.zip.GZIPOutputStream").init( fileOut );
+      var fileOut = createobject( "java", "java.io.ByteArrayOutputStream" ).init();
+      var out = createobject( "java", "java.util.zip.GZIPOutputStream" ).init( fileOut );
 
       out.write( sInput.getBytes("UTF-8"), 0, len( sInput.getBytes("UTF-8")));
       out.finish();
@@ -67,7 +68,7 @@ component {
       cfheader( name="content-encoding", value="gzip" );
       cfheader( name="content-length", value=len( fileout.tobytearray()));
 
-      cfcontent( type="text/html; charset=utf-8", reset="true", variable="#fileOut.toByteArray()#" );
+      cfcontent( type="text/html; charset=utf-8", reset="true", variable=fileOut.toByteArray());
     } else {
       // at least replace whitespace:
       writeOutput( sInput );
