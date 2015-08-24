@@ -34,6 +34,7 @@ component {
     }
 
     if( !fileExists( expandPath( '../pages/#tpl#' ))) {
+      local.page = tpl;
       tpl = "404.cfm";
     }
 
