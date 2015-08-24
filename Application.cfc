@@ -1,15 +1,16 @@
 component {
   this.name = "mingo-nl";
-  this.root = getDirectoryFromPath( getCurrentTemplatePath());
+  this.domainName = "home.mingo.nl";
+  this.root = "/" & listChangeDelims( getDirectoryFromPath( getCurrentTemplatePath()), "/", "\/" );
   this.mappings["/"] = this.root;
 
   public void function onRequestStart() {
-    var domainname = "home.mingo.nl";
+    var this.domainName = "home.mingo.nl";
     var relocateonce = (
           cgi.server_port_secure == 1
             ? "https"
             : "http"
-        ) & "://" & domainname & (
+        ) & "://" & this.domainName & (
           cgi.script_name == "/index.cfm"
             ? "/"
             : cgi.script_name
@@ -19,44 +20,54 @@ component {
             : ""
         );
 
-    if( cgi.server_name != domainname ) {
+    if( cgi.server_name != this.domainName ) {
       // location( relocateonce, false, 301 );
     }
   }
 
   public void function onRequest() {
-    var local = {};
-    var assembled = "";
+    // extract template from URL:
     var tpl = cgi.PATH_INFO;
         tpl = listLast( tpl, "/" );
 
+    // no template provided, set to home page:
     if( listLen( tpl, "/" ) == 0 ) {
       tpl = "home.cfm";
     }
 
-    if( !fileExists( this.root & "/pages/#tpl#" )) {
-      local.page = tpl;
+    // store original template in case of 404:
+    var local = {
+      page = this.root & "/pages/#tpl#"
+    };
+
+    // page not found, set template to 404:
+    if( !fileExists( local.page )) {
       tpl = "404.cfm";
     }
 
+    // run page code:
     savecontent variable="local.body" {
       include "/pages/#tpl#";
     };
 
+    // assemble page into layout:
+    var assembled = "";
     savecontent variable="assembled" {
       include "/parts/layout.cfm";
     }
 
-    htmlCompressFormat( assembled );
+    // output compressed page to browser:
+    compressHTML( assembled );
   }
 
-  public void function htmlCompressFormat( string sInput="" ) {
+  public void function compressHTML( string sInput="" ) {
     // replace superfluous whitespace:
     sInput = trim( reReplace( sInput, "\s{2,}|\n+|<!--(.*?)-->", "", "all" ));
 
     // cfcache( action="clientcache", timespan=createtimespan( 7, 0, 0, 0 ));
     cfheader( name="cache-control", value="max-age=604800" );
 
+    // use gzip when available:
     if( cgi.HTTP_ACCEPT_ENCODING contains "gzip" ) {
       var fileOut = createobject( "java", "java.io.ByteArrayOutputStream" ).init();
       var out = createobject( "java", "java.util.zip.GZIPOutputStream" ).init( fileOut );
@@ -70,10 +81,7 @@ component {
 
       cfcontent( type="text/html; charset=utf-8", reset="true", variable=fileOut.toByteArray());
     } else {
-      // at least replace whitespace:
       writeOutput( sInput );
     }
-
-    abort;
   }
 }
