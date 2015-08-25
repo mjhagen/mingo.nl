@@ -10,25 +10,25 @@ body {
 h1 {
   color: black;
   font-weight: 500;
-  font-size: 48px;
-  letter-spacing: -.04em;
+  font-size: 2.5rem;
+  letter-spacing: -.04rem;
   margin: 0;
-  margin-bottom: .75em;
+  margin-bottom: .75rem;
   background-color: #f2f2f2;
-  padding: 1em 1em .5em 1em;
+  padding: 1.5rem 1.33rem 1rem 1.5rem;
 }
 
 p.lead {
-  font-size: 24px;
+  font-size: 1.33rem;
 }
 
 p, ul, ol, dl {
-  letter-spacing: -.03em;
-  padding: 0em 2em;
+  letter-spacing: -.03rem;
+  padding: 0rem 1.66rem;
 }
 
 li {
-  margin-left: 3em
+  margin-left: 3rem
 }
 
 dt {
@@ -40,8 +40,8 @@ dd {
 }
 
 p.copyright {
-  font-size: 1.2em;
-  margin-left: 1.7em;
+  font-size: 1.2rem;
+  margin-left: 1.7rem;
 }
 
 a {
@@ -59,7 +59,7 @@ strong, b {
 }
 
 #server {
-  position: absolute;
+  position: fixed;
   bottom: 20px;
   right: 20px;
   color: silver;
@@ -69,3 +69,12 @@ strong, b {
 .homebtn {
   float: left;
 }
+
+@media(max-width:767px){
+  html, body {
+    font-size: 12px;
+  }
+}
+@media(min-width:768px){}
+@media(min-width:992px){}
+@media(min-width:1200px){}
