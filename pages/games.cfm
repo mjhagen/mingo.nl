@@ -4,12 +4,16 @@
 <cfset local.description = "Mingo Hagen is E-Line Websolutions' CTO and lead programmer. This is a personal website." />
 <cfset local.keywords    = "personal mingo hagen mhagen mjhagen coldfusion e-line amsterdam netherlands developer" />
 
-<cfif not fileExists( expandPath( '../texts/games.html' )) or isDefined( "url.reload" )>
-  <cfset jl = new javaloader.javaloader( directoryList( expandPath( "../lib" ), false, "path", "*.jar" ), false ) />
-  <cfset pegDown = jl.create( "org.pegdown.PegDownProcessor" ) />
-  <cfset pegDownProcessor = pegDown.init( javaCast( 'int', 32 )) />
-  <cfset fileWrite( expandPath( '../texts/games.html' ), pegDownProcessor.markdownToHtml( fileRead( expandPath( '../texts/games.md' ), 'utf-8' )), 'utf-8' ) />
-</cfif>
+<cfset local.textName = "games" />
+
+<cflock scope="application" timeout="10" type="exclusive">
+  <cfif ( not structKeyExists( application, "content" ) or not structKeyExists( application.content, local.textName ) ) or isDefined( "url.reload" )>
+    <cfset pegDown = createObject( "java", "org.pegdown.PegDownProcessor" ) />
+    <cfset pegDownProcessor = pegDown.init( javaCast( 'int', 32 )) />
+    <cfset application.content["#local.textName#"] = pegDownProcessor.markdownToHtml( fileRead( expandPath( "../texts/#local.textName#.md" ), "utf-8" )) />
+  </cfif>
+  <cfset local.content = application.content["#local.textName#"] />
+</cflock>
 
 <a class="homebtn" href="/" title="Go back to the home page.">Home</a>
 
@@ -19,7 +23,7 @@
   I’ve played lots of video games in my life, but these are the ones that stuck. Most I finished, all of them I remember fondly and have sentimental value, like a good film or book.
 </p>
 
-<div class="container"><cfoutput>#fileRead( expandPath( '../texts/games.html' ), 'utf-8' )#</cfoutput></div>
+<div class="container"><cfoutput>#local.content#</cfoutput></div>
 
 <script>
   var tables = document.getElementsByTagName( 'table' );

@@ -3,6 +3,11 @@ component {
   this.domainName = "home.mingo.nl";
   this.root = "/" & listChangeDelims( getDirectoryFromPath( getCurrentTemplatePath()), "/", "\/" );
   this.mappings["/"] = this.root;
+  this.javaSettings = {
+    loadPaths = ["/lib"],
+    reloadOnChange = true,
+    watchInterval = 30
+  };
 
   public void function onRequestStart() {
     var this.domainName = "home.mingo.nl";
@@ -30,7 +35,7 @@ component {
     var tpl = listLast( cgi.script_name, "/" );
 
     // no template provided, set to home page:
-    if( listLen( tpl, "/" ) == 0 ) {
+    if( listLen( tpl, "/" ) == 0 || tpl == "index.cfm" ) {
       tpl = "home.cfm";
     }
 
@@ -42,7 +47,7 @@ component {
       savecontent variable="local.body" {
         include "/pages/#tpl#";
       };
-    } catch( any e ) {
+    } catch( missinginclude e ) {
       // page not found, set template to 404:
       savecontent variable="local.body" {
         include "/pages/404.cfm";
