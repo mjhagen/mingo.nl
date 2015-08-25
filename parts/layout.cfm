@@ -13,7 +13,7 @@
     <meta name="keywords" content="<cfoutput>#local.keywords#</cfoutput>" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="/static/css/main.css" />
 
     <script src="//use.typekit.net/ldb5yfa.js"></script>

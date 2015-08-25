@@ -27,8 +27,7 @@ component {
 
   public void function onRequest() {
     // extract template from URL:
-    var tpl = cgi.PATH_INFO;
-        tpl = listLast( tpl, "/" );
+    var tpl = listLast( cgi.script_name, "/" );
 
     // no template provided, set to home page:
     if( listLen( tpl, "/" ) == 0 ) {
@@ -36,19 +35,19 @@ component {
     }
 
     // store original template in case of 404:
-    var local = {
-      page = this.root & "/pages/#tpl#"
-    };
-
-    // page not found, set template to 404:
-    if( !fileExists( local.page )) {
-      tpl = "404.cfm";
-    }
+    local["page"] = cfmFile = this.root & "/pages/#tpl#";
 
     // run page code:
-    savecontent variable="local.body" {
-      include "/pages/#tpl#";
-    };
+    try {
+      savecontent variable="local.body" {
+        include "/pages/#tpl#";
+      };
+    } catch( any e ) {
+      // page not found, set template to 404:
+      savecontent variable="local.body" {
+        include "/pages/404.cfm";
+      };
+    }
 
     // assemble page into layout:
     var assembled = "";
