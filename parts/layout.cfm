@@ -21,5 +21,6 @@
   </head>
   <body>
     <div class="container-fluid"><cfoutput>#local.body#</cfoutput></div>
+    <div id="server"><cfoutput>#cgi.local_host#</cfoutput></div>
   </body>
 </html>

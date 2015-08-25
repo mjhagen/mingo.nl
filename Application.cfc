@@ -1,6 +1,9 @@
 component {
   this.name = "mingo-nl";
-  this.domainName = "home.mingo.nl";
+  this.sessionManagement = false;
+  this.cookieManagement = false;
+  this.setClienCookies = false;
+  this.domainName = "mingo.nl";
   this.root = "/" & listChangeDelims( getDirectoryFromPath( getCurrentTemplatePath()), "/", "\/" );
   this.mappings["/"] = this.root;
   this.javaSettings = {
@@ -10,15 +13,15 @@ component {
   };
 
   public void function onRequestStart() {
-    var this.domainName = "home.mingo.nl";
+    var scriptName = listRest( cgi.script_name, "/" );
     var relocateonce = (
           cgi.server_port_secure == 1
             ? "https"
             : "http"
         ) & "://" & this.domainName & (
-          cgi.script_name == "/index.cfm"
+          scriptName == "index.cfm"
             ? "/"
-            : cgi.script_name
+            : "/" & scriptName
         ) & (
           len( trim( cgi.query_string )) > 0
             ? "?" & cgi.query_string
@@ -26,7 +29,7 @@ component {
         );
 
     if( cgi.server_name != this.domainName ) {
-      // location( relocateonce, false, 301 );
+      location( relocateonce, false, 301 );
     }
   }
 
@@ -40,7 +43,7 @@ component {
     }
 
     // store original template in case of 404:
-    local["page"] = cfmFile = this.root & "/pages/#tpl#";
+    local["page"] = this.root & "/pages/#tpl#";
 
     // run page code:
     try {
@@ -68,7 +71,7 @@ component {
     // replace superfluous whitespace:
     sInput = trim( reReplace( sInput, "\s{2,}|\n+|<!--(.*?)-->", "", "all" ));
 
-    // cfcache( action="clientcache", timespan=createtimespan( 7, 0, 0, 0 ));
+    cfcache( action="clientcache", timespan=createtimespan( 7, 0, 0, 0 ));
     cfheader( name="cache-control", value="max-age=604800" );
 
     // use gzip when available:

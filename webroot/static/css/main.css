@@ -58,25 +58,12 @@ strong, b {
   font-weight: 600;
 }
 
-#buttons_placeholder {
+#server {
   position: absolute;
-  right: 10px;
-  top: 10px;
-}
-
-#buttons_placeholder img {
-  border: 0
-}
-
-#TwitterCounter {
-  display: inline
-}
-
-#twitterremote_placeholder {
-  position: absolute;
-  right: 30px;
-  top: 130px;
-  width: 200px;
+  bottom: 20px;
+  right: 20px;
+  color: silver;
+  font-size: 10px;
 }
 
 .homebtn {
