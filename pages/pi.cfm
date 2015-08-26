@@ -10,6 +10,6 @@
   This website is hosted on two Raspberry Pis, running Raspbian, Nginx, Tomcat 7 and <a href="http://lucee.org" title="A light-weight dynamic scripting language for the JVM">Lucee</a>.
   They are configured to balance the load between the two.<br /><br />
 
-  <img src="/static/img/rack.jpg" class="img-responsive" />
+  <img src="http://mingo-nl.no-cookies.com/img/rack.jpg" class="img-responsive" />
 </p>
 
