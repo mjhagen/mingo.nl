@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://mingo-nl.no-cookies.com/css/main.css" />
 
-    <script src="//use.typekit.net/ldb5yfa.js"></script>
+    <script src="http://mingo-nl.no-cookies.com/js/typekit.js"></script>
     <script>
       try{Typekit.load();}catch(e){};
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
