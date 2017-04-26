@@ -1,2 +1,4 @@
 WEB-INF
 sftp-config.json
+sftp-config-alt.json
+*.html

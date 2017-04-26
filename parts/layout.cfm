@@ -14,15 +14,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://mingo-nl.no-cookies.com/css/main.css" />
+    <link rel="stylesheet" href="//mingo-nl.no-cookies.com/css/main.css" />
 
-    <script src="http://mingo-nl.no-cookies.com/js/typekit.js"></script>
+    <script data-cfasync="false" type="text/javascript" src="http://use.typekit.com/ldb5yfa.js"></script>
+    <script data-cfasync="false" type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <script>
-      try{Typekit.load();}catch(e){};
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','http://mingo-nl.no-cookies.com/js/analytics.js','ga');
+      })(window,document,'script','//mingo-nl.no-cookies.com/js/analytics.js','ga');
       ga('create', 'UA-4591808-1', 'auto');
       ga('send', 'pageview');
     </script>
