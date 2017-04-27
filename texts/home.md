@@ -8,7 +8,7 @@ I was born in [Amsterdam](https://www.flickr.com/photos/mjhagen/sets/72157603751
 I am CTO and owner of [E-Line Websolutions](http://e-linewebsolutions.nl/ "E-Line Websolutions’ website.") where I mainly program in [CFML](https://en.wikipedia.org/wiki/ColdFusion_Markup_Language "ColdFusion Markup Language"), I'm also an admin for the [CFML Slack](http://cfml-slack.herokuapp.com "Let’s talk about ColdFusion and Lucee").
 
 I’ll let you know what I’m up to via [Twitter](https://twitter.com/mjhagen/ "Follow @mjhagen on Twitter.").<br />
-I post my photos to [Instagram](https://instagram.com/mjhagen/ "See Mingo’s photos on Instagram.") and [Flickr](https://flickr.com/photos/mjhagen/ "See Mingo’s photos on Flickr."), sometimes they even get [published](/flickr "See Mingo’s published photographs.").<br />
-I’m completely adicted to [Video Games](/games "List of my favorite video games.") and the music I listen to is scrobbled to [Last.fm](https://www.last.fm/user/mhagen "Mingo’s favorite music posted to Last.fm.").
+I post my photos to [Instagram](https://instagram.com/mjhagen/ "See Mingo’s photos on Instagram.") and [Flickr](https://flickr.com/photos/mjhagen/ "See Mingo’s photos on Flickr."), sometimes they even get [published](/flickr.cfm "See Mingo’s published photographs.").<br />
+I’m completely adicted to [Video Games](/games.cfm "List of my favorite video games.") and the music I listen to is scrobbled to [Last.fm](https://www.last.fm/user/mhagen "Mingo’s favorite music posted to Last.fm.").
 
-This website is hosted on my [LEGO Pi Rack](/pi "Page showing how this website is hosted.").
+This website is hosted on my [LEGO Pi Rack](/pi.cfm "Page showing how this website is hosted.").

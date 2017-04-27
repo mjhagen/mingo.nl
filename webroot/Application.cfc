@@ -1,9 +1,9 @@
 component {
   this.name = "mingo-nl";
-  this.root = listChangeDelims( getDirectoryFromPath( getCurrentTemplatePath( ) ), '/', '\' );
-  this.root = listDeleteAt( this.root, listLen( this.root, "/" ), "/" );
+  tmp = listChangeDelims( getDirectoryFromPath( getCurrentTemplatePath( ) ), '/', '\' );
+  this.root = listDeleteAt( tmp, listLen( tmp, "/" ), "/" );
   this.mappings[ "/" ] = this.root;
-  this.javaSettings = { loadPaths = [ "/lib" ] };
+  this.javaSettings = { loadPaths = [ this.root & "/lib" ] };
 
   public void function onApplicationStart( ) {
     structClear( application );
