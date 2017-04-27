@@ -1,13 +1,12 @@
 component {
   this.name = "mingo-nl";
-  this.root = getDirectoryFromPath( getCurrentTemplatePath( ) );
+  this.root = getDirectoryFromPath( getCurrentTemplatePath( ) ) & "../";
   this.mappings[ "/" ] = this.root;
+  this.javaSettings = { loadPaths = [ "/lib" ] };
 
   public void function onApplicationStart( ) {
     structClear( application );
-    var jl = new javaloader.javaloader( directoryList( this.root & "/lib", false, "path", "*.jar" ), false );
-    var pegDown = jl.create( "org.pegdown.PegDownProcessor" );
-    application[ "pegDownProcessor" ] = pegDown.init( javaCast( 'int', 32 ) );
+    application[ "pegDownProcessor" ] = createObject( "java", "org.pegdown.PegDownProcessor" ).init( javaCast( "int", 32 ) );
     application[ "cache" ] = { };
   }
 
@@ -76,8 +75,9 @@ component {
 
       cfheader( name="content-encoding", value="gzip" );
       cfheader( name="content-length", value=len( fileout.tobytearray( ) ));
-      cfcontent( type="text/html; charset=utf-8", reset="true", variable=fileOut.toByteArray( ));
+      cfcontent( type="text/html; charset=utf-8", reset=true, variable=fileOut.toByteArray( ));
     } else {
+      cfcontent( reset=true );
       writeOutput( sInput );
     }
 
@@ -157,7 +157,7 @@ component {
         );
 
     if ( cgi.server_name != domainname ) {
-      location( relocateonce, false, 301 );
+      // location( relocateonce, false, 301 );
     }
   }
 }
