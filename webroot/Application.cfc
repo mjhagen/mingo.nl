@@ -1,6 +1,7 @@
 component {
   this.name = "mingo-nl";
-  this.root = getDirectoryFromPath( getCurrentTemplatePath( ) ) & "../";
+  this.root = listChangeDelims( getDirectoryFromPath( getCurrentTemplatePath( ) ), '/', '\' );
+  this.root = listDeleteAt( this.root, listLen( this.root, "/" ), "/" );
   this.mappings[ "/" ] = this.root;
   this.javaSettings = { loadPaths = [ "/lib" ] };
 
@@ -44,13 +45,15 @@ component {
       tpl = "page";
     }
 
-    if ( !fileExists( this.root & "/pages/#tpl#.cfm" ) ) {
-      tpl = "404";
+    try {
+      savecontent variable="rc.body" {
+        include "/pages/#tpl#.cfm";
+      };
+    } catch ( MissingTemplate e ) {
+      savecontent variable="rc.body" {
+        include "/pages/404.cfm";
+      };
     }
-
-    savecontent variable="rc.body" {
-      include "/pages/#tpl#.cfm";
-    };
 
     savecontent variable="local.assembled" {
       include "/parts/layout.cfm";
@@ -96,26 +99,24 @@ component {
       return application.cache[ "#file#.html" ];
     }
 
+    var inMetaData = true;
     var mdFilePath = this.root & "/texts/#file#.md";
-
-    if ( !fileExists( mdFilePath ) ) {
-      return { };
-    }
-
     var mdFileMetaData = [ ];
     var mdFileContent = [ ];
-    var mdFileReader = fileOpen( mdFilePath, "read", "utf-8" );
-    var inMetaData = true;
 
-    while ( !fileIsEOF( mdFileReader ) ) {
-      var line = fileReadLine( mdFileReader );
-      if ( inMetaData && line == "" ) {
-        inMetaData = false;
+    try {
+      var mdFileReader = fileOpen( mdFilePath, "read", "utf-8" );
+      while ( !fileIsEOF( mdFileReader ) ) {
+        var line = fileReadLine( mdFileReader );
+        if ( inMetaData && line == "" ) {
+          inMetaData = false;
+        }
+        arrayAppend( inMetaData ? mdFileMetaData : mdFileContent, line );
       }
-      arrayAppend( inMetaData ? mdFileMetaData : mdFileContent, line );
+      fileClose( mdFileReader );
+    } catch ( any e ) {
+      return { };
     }
-
-    fileClose( mdFileReader );
 
     for ( var kvdata in mdFileMetaData ) {
       var key = trim( listFirst( kvdata, "|" ) );
@@ -124,7 +125,6 @@ component {
     }
 
     result.content = application.pegDownProcessor.markdownToHtml( trim( arrayToList( mdFileContent, chr( 10 ) ) ) );
-
     result.content = replace( result.content, '<h1', '<h1 class="row"', 'once' );
     result.content = replace( result.content, '<p', '<p class="lead"', 'all' );
     result.content = replace( result.content, '<table', '<div class="container"><table class="table"', 'all' );

@@ -3,4 +3,5 @@
 <cfoutput>
   <h1>#rc.title#</h1>
   <p>Missing page: #rc.page#</p>
+  <p>(#cgi.PATH_INFO#)</p>
 </cfoutput>
