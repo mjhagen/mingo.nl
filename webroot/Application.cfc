@@ -27,7 +27,13 @@ component {
       "body" = ""
     };
 
-    var tpl = listFirst( listLast( cgi.PATH_INFO, "/" ), "." );
+    var pathInfo = cgi.path_info;
+
+    if ( structKeyExists( server, "lucee" ) ) {
+      pathInfo = cgi.script_name;
+    }
+
+    var tpl = listFirst( listLast( pathInfo, "/" ), "." );
 
     if ( !len( tpl ) ) {
       tpl = "home";
