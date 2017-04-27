@@ -10,25 +10,25 @@ body {
 h1 {
   color: black;
   font-weight: 500;
-  font-size: 2.5rem;
-  letter-spacing: -.04rem;
+  font-size: 48px;
+  letter-spacing: -.04em;
   margin: 0;
-  margin-bottom: .75rem;
+  margin-bottom: .75em;
   background-color: #f2f2f2;
-  padding: 1.5rem 1.33rem 1rem 1.5rem;
+  padding: 1em 1em .5em 1em;
 }
 
 p.lead {
-  font-size: 1.33rem;
+  font-size: 24px;
 }
 
 p, ul, ol, dl {
-  letter-spacing: -.03rem;
-  padding: 0rem 1.66rem;
+  letter-spacing: -.03em;
+  padding: 0em 2em;
 }
 
 li {
-  margin-left: 3rem
+  margin-left: 3em
 }
 
 dt {
@@ -40,8 +40,8 @@ dd {
 }
 
 p.copyright {
-  font-size: 1.2rem;
-  margin-left: 1.7rem;
+  font-size: 1.2em;
+  margin-left: 1.7em;
 }
 
 a {
@@ -58,23 +58,27 @@ strong, b {
   font-weight: 600;
 }
 
-#server {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  color: silver;
-  font-size: 10px;
+#buttons_placeholder {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+#buttons_placeholder img {
+  border: 0
+}
+
+#TwitterCounter {
+  display: inline
+}
+
+#twitterremote_placeholder {
+  position: absolute;
+  right: 30px;
+  top: 130px;
+  width: 200px;
 }
 
 .homebtn {
   float: left;
 }
-
-@media(max-width:767px){
-  html, body {
-    font-size: 12px;
-  }
-}
-@media(min-width:768px){}
-@media(min-width:992px){}
-@media(min-width:1200px){}
