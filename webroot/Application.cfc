@@ -35,7 +35,7 @@ component {
 
     var tpl = listFirst( listLast( pathInfo, "/" ), "." );
 
-    if ( !len( tpl ) ) {
+    if ( !len( tpl ) || tpl == "index" ) {
       tpl = "home";
     }
 

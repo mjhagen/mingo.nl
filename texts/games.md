@@ -62,9 +62,19 @@ I’ve played lots of video games in my life, but these are the ones that stuck.
 
 1. 2010 **Minecraft** PC
 2. 2011 [**Battlefield 3**](http://battlelog.battlefield.com/bf3/soldier/mjhagen/stats/904379483/pc/) PC
-3. 2013 **The Last of Us** PS3, 2015
-4. 2014 **Alien Isolation** PC, 2015
-5. 2001 **Advance Wars** GBA, 2015
+3. ~~2013 **The Last of Us** PS3, 2015~~
+4. ~~2014 **Alien Isolation** PC, 2015~~
+5. ~~2001 **Advance Wars** GBA, 2015~~
+
+----
+
+###Top 5 (for https://twitter.com/epicgeezr/status/891781690540118018)
+
+1. Battlefield 3 (PC)
+2. Minecraft (PC)
+3. Metal Gear Sold (PS1)
+4. Red Dead Redemption (PS3)
+5. Street Fighter II (Arcade)
 
 ----
 
