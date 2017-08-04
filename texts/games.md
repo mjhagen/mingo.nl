@@ -2,7 +2,7 @@ title       | Mingo’s Video Game History
 description | Mingo Hagen is E-Line Websolutions' CTO and lead programmer. This is a personal website.
 keywords    | personal mingo hagen mhagen mjhagen coldfusion e-line amsterdam netherlands developer
 
-#Mingo’s Video Game History
+# Mingo’s Video Game History
 
 I’ve played lots of video games in my life, but these are the ones that stuck. Most I finished, all of them I remember fondly and have sentimental value, like a good film or book.
 
@@ -58,7 +58,7 @@ I’ve played lots of video games in my life, but these are the ones that stuck.
 
 ----
 
-###Games I’m currently playing (in order of when I started)
+### Games I’m currently playing (in order of when I started)
 
 1. 2010 **Minecraft** PC
 2. 2011 [**Battlefield 3**](http://battlelog.battlefield.com/bf3/soldier/mjhagen/stats/904379483/pc/) PC
@@ -68,7 +68,7 @@ I’ve played lots of video games in my life, but these are the ones that stuck.
 
 ----
 
-###Top 5 (for https://twitter.com/epicgeezr/status/891781690540118018)
+### Top 5 (for https://twitter.com/epicgeezr/status/891781690540118018)
 
 1. Battlefield 3 (PC)
 2. Minecraft (PC)
@@ -78,9 +78,9 @@ I’ve played lots of video games in my life, but these are the ones that stuck.
 
 ----
 
-###Platforms I played on
+### Platforms I played on
 
-####At home
+#### At home
 
 1. Nintendo Game Boy (GB, 1990)
 2. Macintosh Classic (Mac, 1991)
@@ -89,7 +89,7 @@ I’ve played lots of video games in my life, but these are the ones that stuck.
 5. PlayStation 2 (PS2, 2000)
 6. Self built gaming PC (PC, 2011)
 
-####Elsewhere
+#### Elsewhere
 
 1. Atari Lynx
 2. Various PCs
