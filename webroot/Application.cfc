@@ -41,9 +41,9 @@ component {
 
     rc.page = tpl;
 
-    if ( reFind( "\W+", tpl ) ) {
-      tpl = "404";
-    }
+//    if ( reFind( "\W+", tpl ) ) {
+//      tpl = "404";
+//    }
 
     structAppend( rc, parseMarkdownText( tpl ), true );
 
@@ -135,6 +135,7 @@ component {
     result.content = replace( result.content, '<p', '<p class="lead"', 'all' );
     result.content = replace( result.content, '<table', '<div class="container"><table class="table"', 'all' );
     result.content = replace( result.content, '</table>', '</table></div>', 'all' );
+    result.content = replace( result.content, '{strava}', fileRead( this.root & '/parts/strava.cfm' ) );
 
     application.cache[ "#file#.html" ] = result;
     return result;

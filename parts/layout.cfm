@@ -10,9 +10,15 @@
 
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="me" href="https://micro.blog/mjhagen">
+    <link rel="pgpkey" href="/key.pub">
+    <link rel="authorization_endpoint" href="https://indieauth.com/auth">
+    <link rel="token_endpoint" href="https://tokens.indieauth.com/token">
   </head>
   <body>
-    <div class="container-fluid"><cfoutput>#rc.body#</cfoutput></div>
+    <div class="container-fluid">
+      <cfoutput>#rc.body#</cfoutput>
+    </div>
     <script data-cfasync="false" type="text/javascript" src="http://use.typekit.com/ldb5yfa.js"></script>
     <script data-cfasync="false" type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','/static/js/analytics.js','ga');ga('create', 'UA-4591808-1', 'auto');ga('send', 'pageview');</script>
