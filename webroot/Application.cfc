@@ -15,7 +15,6 @@ component {
     if ( !isNull( url.reload ) ) {
       onApplicationStart( );
     }
-    relocateOnce( );
   }
 
   public void function onRequest( ) {
@@ -141,30 +140,5 @@ component {
     return result;
 
     return { };
-  }
-
-  private void function relocateOnce( ) {
-    if ( listFindNoCase( "home,dev", listLast( cgi.server_name, "." ) ) ) {
-      return;
-    }
-
-    var domainname = "mingo.nl";
-    var relocateonce = (
-          cgi.server_port_secure == 1
-            ? "https"
-            : "http"
-        ) & "://" & domainname & (
-          cgi.script_name == "/index.cfm"
-            ? "/"
-            : cgi.script_name
-        ) & (
-          len( trim( cgi.query_string ) ) > 0
-            ? "?" & cgi.query_string
-            : ""
-        );
-
-    if ( cgi.server_name != domainname ) {
-      // location( relocateonce, false, 301 );
-    }
   }
 }
