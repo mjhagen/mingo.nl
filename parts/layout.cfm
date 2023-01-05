@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="/static/css/main.css">
     <link rel="me" href="https://micro.blog/mjhagen">
+    <link rel="me" href="https://oldbytes.space/@mingo">
     <link rel="pgpkey" href="/key.pub">
     <link rel="authorization_endpoint" href="https://indieauth.com/auth">
     <link rel="token_endpoint" href="https://tokens.indieauth.com/token">
