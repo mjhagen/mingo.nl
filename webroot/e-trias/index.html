@@ -1,0 +1,67 @@
+<link href="e-trias.css" rel="stylesheet">
+
+<div style="font-size:100px;" id="colorful-text">
+  <i class="icon-aardgasvrij"></i>
+  <i class="icon-biogas"></i>
+  <i class="icon-bodem-isolatie"></i>
+  <i class="icon-convectoren"></i>
+  <i class="icon-geisoleerd-voorzet-wand-buitenkant-gevel"></i>
+  <i class="icon-zonneboiler"></i>
+  <i class="icon-zonnepanelen"></i>
+  <i class="icon-spouwmuur-isolatie"></i>
+  <i class="icon-gesloten-bron-water-warmtepomp"></i>
+  <i class="icon-gevel-isolatie-geisoleerde-voorzet-wand-binenkant-gevel"></i>
+  <i class="icon-thermostaatkraan"></i>
+  <i class="icon-tochtstrips-plaatsen"></i>
+  <i class="icon-hr-glas"></i>
+  <i class="icon-hybride-warmtepomp"></i>
+  <i class="icon-tripel-glas"></i>
+  <i class="icon-ventilatie-in-huis"></i>
+  <i class="icon-inductie-kooktoestel"></i>
+  <i class="icon-cv-ketel-vervangen"></i>
+  <i class="icon-cv-ketel-verwijderen"></i>
+  <i class="icon-infrarood-paneel"></i>
+  <i class="icon-ventilatiebox-co2-gestuurd"></i>
+  <i class="icon-vloer-isolatie"></i>
+  <i class="icon-kierdichting-verbeteren"></i>
+  <i class="icon-dakisolatie-binnenkant-plat"></i>
+  <i class="icon-dakisolatie-buitenkant-plat"></i>
+  <i class="icon-lucht-lucht-warmtepomp"></i>
+  <i class="icon-vloer-verwarming"></i>
+  <i class="icon-voorzetraam"></i>
+  <i class="icon-lucht-water-warmtepomp"></i>
+  <i class="icon-decentrale-balansventilatie"></i>
+  <i class="icon-deur-vervangen"></i>
+  <i class="icon-warmtenet"></i>
+  <i class="icon-waterzijdig-inregelen"></i>
+  <i class="icon-open-bron-water-warmtepomp"></i>
+  <i class="icon-eigen-laadpaal"></i>
+  <i class="icon-gasmeter-afsluiten"></i>
+  <i class="icon-pvt-warmtepomp"></i>
+  <i class="icon-zoldervloer-isolatie"></i>
+  <i class="icon-radiator-ventilator"></i>
+  <i class="icon-meterkast-vervangen"></i>
+</div>
+
+<script>
+  const delay = 16; // Set the delay between color changes (in milliseconds)
+  const saturation = 100;
+  const lightness = 50;
+  const listItems = document.querySelectorAll('div i');
+  const numItems = listItems.length;
+  let hueOffset = 0;
+
+  function cycleColors() {
+    // Calculate the current hue offset for each list item based on its position
+    for (let i = 0; i < numItems; i++) {
+      const hue = (i * (360 / numItems) + hueOffset) % 360;
+      const hslColor = `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+      listItems[i].style.color = hslColor;
+    }
+
+    // Increment the hue offset
+    hueOffset = (hueOffset + 1);
+  }
+
+  setInterval(cycleColors, delay); // Call the cycleColors function every 'delay' milliseconds
+</script>
