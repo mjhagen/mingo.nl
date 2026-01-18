@@ -1,7 +1,4 @@
 WEB-INF
-sftp-config.json
-sftp-config-alt.json
 webroot/key.pub
 webroot/web.config
-sftp-config-alt2.json
-.vscode/sftp.json
+.vscode/
