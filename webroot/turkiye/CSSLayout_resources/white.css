@@ -1,0 +1,91 @@
+body {
+font-family: Georgia, Times, 'Times New Roman', serif;
+color: #000;
+background-color: #FFF;
+background-image: url("backgroundWhite.gif");
+}
+/* Gallery title and comment */
+h1, h2 {
+background-color: #E8F0F7;
+border: 1px solid #B2CCE5;
+color: #69C;
+}
+/* main page zone */
+#content {
+background-color: #FFF;
+border: 1px solid #B2CCE5;
+}
+.image img {
+border: 1px solid #69C;
+}
+/* thumbnail div in index page, adjust width and height to suit your thumbnail size */
+.thumbnailBlock {
+border: 1px solid #B2CCE5;
+background-color: #FFF;
+}
+.thumbnailBlock:target {
+border: 1px solid #0080FF;
+}
+.thumbnailBlock:hover {
+border: 1px solid #69C;
+background-color: #F7FAFC;
+}
+.commentBlock, .titleBlock {
+color: #000;
+background-color: #E8F0F7;
+}
+#imageIndexBlock, .imageIndexBlock {
+color: #E0EBF5;
+}
+#imageIndexBlock {
+color: #E0EBF5;
+}
+a:link {
+color: #0080FF;
+}
+a:visited {
+color: #9BAABA;
+}
+a:hover, a:active {
+color: #0052A3;
+text-decoration: none;
+}
+/* thumbnail and image comments and titles, copyright */
+#footer {
+color: #69C;
+}
+/* Page navigation zones at top and bottom of page */
+#navig, #navigBottom {
+border-color: #B2CCE5;
+background-color: #69C;
+}
+/* link styles in the page navigation zones */
+#navig a {
+border-bottom: .4em solid #69C;
+}
+#navigBottom a {
+border-top: .3em solid #69C;
+}
+#navig a:link, #navigBottom a:link {
+color: #FFF;
+}
+#navig a:visited, #navigBottom a:visited {
+color: #D8DDE2;
+}
+#navig a:hover, #navig a:active, #navigBottom a:hover, #navigBottom a:active {
+color: #FFF;
+}
+#navig a:hover, #navig a:active, #navigBottom a:hover, #navigBottom a:active {
+border-color: #FFF;
+}
+/* style of the current page 'tab' */
+#navig a.here:link, #navig a.here:visited, #navigBottom a.here:link, #navigBottom a.here:visited {
+color: #0052A3;
+background-color: #E8F0F7;
+}
+#navig .here {
+border-bottom: .4em solid #FFF;
+}
+#navigBottom .here {
+border-top: .3em solid #FFF;
+}

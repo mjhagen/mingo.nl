@@ -54,23 +54,31 @@ I’ve played lots of video games in my life, but these are the ones that stuck.
 | 2008 | **Grand Theft Auto IV**<br />I feel like this is about where big improvements in graphics stopped. And this, at the time of writing, is already 10 years ago! | PS3 | |
 | 2008 | **Metal Gear Solid 4: Guns of the Patriots**<br />I should try MGS2 and 3 one day, but this was the first time since '98 that I amassed enough courage to begin a Hideo game. And he gives me fried eggs? This guy. | PS3 | |
 | 2008 | **Mirrors Edge**<br />Another game about a sport I have 0 feelings for, but the design attracted me to buying it. It then completely convinced me with how well it feels to play. | PS3 | |
+| 2010 | **Inside** | Switch | 2023 |
 | 2010 | **Minecraft**<br />Bought basically sight unseen on October 2nd, 2010 on a tip my coworker gave me. Still love exploring and building things every now and then | PC | |
 | 2010 | **Red Dead Redemption**<br />First (and only) game where I teared up. Everything is in this game. | PS3 | |
 | 2011 | **Battlefield 3**<br />I put close to 2000 hours into this one. If you see me near a PC with BF3 installed, pull me away. | PC | |
-| 2013 | **Grand Theft Auto V**<br />The last game I got really into. It's been 5 years already, time for a new one. | PS3 | |
-
+| 2012 | **Journey** | LeGo | 2023 |
+| 2013 | **Grand Theft Auto V**<br />The last game I got really into. It's been 11 years already, time for a new one. | PS3, PC, LeGo | |
+| 2016 | **Firewatch** | PC | 2016 |
+| 2016 | **Limbo** | Switch | 2023 |
+| 2020 | **Factorio** | PC | 2021 |
+| 2022 | **Stray** | LeGo | 2023 |
 ----
 
 ### Platforms I played on
 
 #### At home
 
-1. Nintendo Game Boy (GB, 1990)
-1. Macintosh Classic (Mac, 1991)
-1. Macintosh Performa 5200 (Mac, 1995)
-1. PlayStation (PSX, 1998)
-1. PlayStation 2 (PS2, 2000)
-1. Self built gaming PC (PC, 2011)
+1. Nintendo Game Boy (1990)
+1. Macintosh Classic (1991)
+1. Macintosh Performa 5200 (1995)
+1. PlayStation (1998)
+1. PlayStation 2 (2000)
+1. Self built gaming PC (2011)
+1. Nintendo Switch (2023)
+1. Analogue Pocket (2023)
+1. Lenovo Legion Go (2023)
 
 #### Elsewhere
 
@@ -78,22 +86,31 @@ I’ve played lots of video games in my life, but these are the ones that stuck.
 1. Various PCs
 1. Arcade
 
-#### Game Systems I own
+#### Game Systems I own(ed)
 
 1. Atari 2600 (still fixing this)
 1. Game Boy
-1. Game Boy Pocket
-1. Game Boy Light
-1. Game Boy Color
 1. Game Boy Advance
 1. Game Boy Advance SP
+1. Game Boy Color
+1. Game Boy Light
 1. Game Boy Micro
+1. Game Boy Pocket
 1. [Macs](/apple.cfm "All of my Apple stuff")
-1. NES
-1. Super Nintendo
+1. Nintendo Entertainment System (NES)
+1. Super Nintendo (SNES)
 1. Nintendo 64
+1. Nintendo Switch
 1. PC (Built in 2011: i5 2500k, GTX 560ti)
 1. PlayStation 2
+1. PlayStation 2 Slim
+1. PlayStation 3 (donated)
+1. PlayStation 4
+1. Analogue Pocket
+1. Lenovo Legion Go
 
 
+----
 
+
+###### Updated: 2024-01-15

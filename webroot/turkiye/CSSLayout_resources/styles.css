@@ -1,0 +1,119 @@
+body {
+padding: 10px;
+margin: 10px;
+}
+/* Gallery title and comment */
+h1, h2 {
+text-align: center;
+margin: 0 0 5px 0;
+padding: 0;
+font-size: 140%;
+}
+h2 {
+font-weight: normal;
+margin: -6px 0 5px 0;
+font-size: 80%;
+}
+/* main page zone */
+#content {
+padding: 5px;
+margin: 0;
+text-align: center;
+width: auto;
+}
+img {
+border: 0 none;}
+img.fullImage {
+margin-right: -17em;
+}
+/* thumbnail div in index page */
+.thumbnailBlock {
+float: left;
+margin: 5px;
+padding: 0;
+text-align: center;
+font-size: 80%;
+}
+.imageBlock {
+margin: 5px auto;
+}
+.commentBlock, .titleBlock {
+height: 2.8em !important;
+height: 3em;
+overflow: hidden;
+line-height: 1.4em;
+margin: 0 0 5px 0;
+padding: .1em;
+}
+.titleBlock {
+height: 1.3em !important;
+height: 1.5em;
+margin: 5px 0 0 0;
+}
+#imageIndexBlock, .imageIndexBlock {
+font-size: 120%;
+float: right;
+}
+#imageIndexBlock {
+font-size: 8em;
+line-height: .65em;
+width: 2em;
+margin-left: 0;
+padding-right: .1em;
+text-align: right;
+letter-spacing: -.05em;
+}
+/* thumbnail and image comments and titles, copyright */
+#imageComment {
+margin: 2px 0 5px 0;
+font-size: 80%;
+}
+#footer {
+clear: both;
+font-size: 80%;
+}
+br.coupe {
+clear: both;
+line-height: .1em;
+}
+/* Page navigation zones at top and bottom of page */
+#navig, #navigBottom {
+margin: 0;
+padding: 0 0 .1em 0;
+text-align: left;
+border-style: solid;
+height: 1.5em !important;
+height: 1.7em;
+overflow: hidden;
+font-size: 90%;
+}
+#navig {
+border-width: 1px 1px 0 1px;
+}
+#navigBottom {
+border-width: 0 1px 1px 1px;
+}
+/* link styles in the page navigation zones */
+#navig li, #navigBottom li {
+display: inline;
+list-style-type: none;
+padding: 0;
+}
+#navig a, #navigBottom a {
+float: left;
+margin: 0 1px 0 0;
+line-height: 1em;
+text-decoration: none;
+}
+#navig a, #navigBottom a {
+padding: 0 5px .3em 5px;
+}
+/* style of the current page 'tab' */
+#navig a.here, #navigBottom a.here {
+float: left;
+margin: 0 1px 0 0;
+}
+#navig .end, #navigBottom .end {
+display: block;
+padding: 0 0 4px 0;
+}
