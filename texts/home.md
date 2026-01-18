@@ -9,13 +9,13 @@ I was born in [Amsterdam](https://www.flickr.com/photos/mjhagen/sets/72157603751
 My girlfriend is [Hanneke](https://hannekekijkt.nl/ "Website of Hanneke Meijers of Hanneke Kijkt."),
 she has a [Circus](https://tent.eu "TENT Circus Theater Productions") where I occasionally work as a sound technician.
 
-By day I work for [E-Trias Ingenieurs](https://e-trias.nl/ "E-Trias’ website.") and [E-Line Websolutions](https://e-line.nl "E-Line's website.") where I maintain servers and develop software.
+By day I work on my own startup, more on this soon.
 
 By night I tinker away at my collection of old [Apple stuff](/apple.cfm "List of my Apple devices.")
 of which I also post photos as [VintageMacDude](https://instagram.com/vintagemacdude/ "Mingo’s other Instagram account").
 
 I’ll let you know what I’m up to via
-[Mastodon](https://oldbytes.space/@mingo "Follow @mingo@oldbytes.space on Mastodon." rel="me") and
+[Bluesky](https://bsky.app/profile/mingo.nl "Follow me on Bluesky." rel="me") and
 [Instagram](https://instagram.com/mjhagen/ "Mingo’s Instagram account" rel="me").
 
 I've listed a few [video games](/games.cfm "List of my favorite video games.") I loved playing
